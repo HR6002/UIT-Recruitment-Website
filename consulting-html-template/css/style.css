@@ -5,8 +5,31 @@
     --dark: #0E2E50;
 }
 
+/* Style for media container */
+.media-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width of the container */
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio for the media (16:9 ratio) */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    margin-bottom: 1rem; /* Spacing below the media */
+}
 
+/* Make media element fill the container */
+.media-container .media-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area of the container */
+}
 
+/* Style for video element */
+.media-container video {
+    object-fit: cover;
+}
 
 /*** Spinner ***/
 #spinner {
@@ -39,7 +62,6 @@
     padding-top: 6rem;
     padding-bottom: 6rem;
 }
-
 
 /*** Button ***/
 .btn {
@@ -77,7 +99,6 @@
     font-weight: normal;
     border-radius: 50px;
 }
-
 
 /*** Navbar ***/
 .navbar .navbar-nav .nav-link {
@@ -214,7 +235,6 @@
     }
 }
 
-
 /*** Hero Header ***/
 .hero-header {
     margin-bottom: 6rem;
@@ -240,7 +260,6 @@
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: rgba(256, 256, 256, .5);
 }
-
 
 /*** Service ***/
 .service-item {
@@ -278,7 +297,6 @@
     opacity: 1;
 }
 
-
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
@@ -291,11 +309,6 @@
     box-shadow: none;
     border-color: var(--primary);
     transform: scale(1);
-}
-
-.testimonial-carousel .owl-item .testimonial-item img {
-    width: 50px;
-    height: 50px;
 }
 
 .testimonial-carousel .owl-nav {
@@ -323,7 +336,6 @@
     color: #FFFFFF;
     background: var(--primary);
 }
-
 
 /*** Team ***/
 .team-item {
@@ -373,7 +385,6 @@
     padding: 15px;
     border: 1px solid var(--primary);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {
