@@ -426,6 +426,12 @@
     letter-spacing: 1px;
     box-shadow: none;
 }
+.container-xxl.bg-white {
+    background-color: #ffffff;
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+
 
 .footer .copyright {
     padding: 25px 0;
