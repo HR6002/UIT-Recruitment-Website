@@ -1,7 +1,6 @@
 (function ($) {
-
     "use strict";
-    
+
     // Spinner
     var spinner = function () {
         setTimeout(function () {
@@ -12,8 +11,10 @@
     };
     spinner();
     
+    
     // Initiate the wowjs
     new WOW().init();
+
 
     // Sticky Navbar
     $(window).scroll(function () {
@@ -23,6 +24,24 @@
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
     });
+
+
+    // Smooth scrolling on the navbar links
+    $(".navbar-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top - 60
+            }, 1500, 'easeInOutExpo');
+            
+            if ($(this).parents('.navbar-nav').length) {
+                $('.navbar-nav .active').removeClass('active');
+                $(this).closest('a').addClass('active');
+            }
+        }
+    });
+    
     
     // Back to top button
     $(window).scroll(function () {
@@ -37,11 +56,19 @@
         return false;
     });
 
+
+    // Facts counter
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
+    });
+
+
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
-        center: true,
+        margin: 25,
         dots: false,
         loop: true,
         nav : true,
@@ -53,45 +80,11 @@
             0:{
                 items:1
             },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
             992:{
-                items:3
-            }
-        }
-    });
-
-    // Client carousel
-    $(".client-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 90,
-        dots: false,
-        loop: true,
-        nav : false,
-        responsive: {
-            0:{
                 items:2
-            },
-            576:{
-                items:3
-            },
-            768:{
-                items:4
-            },
-            992:{
-                items:5
-            },
-            1200:{
-                items:6
             }
         }
     });
     
-    
-
 })(jQuery);
+

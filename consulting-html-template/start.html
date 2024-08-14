@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Container Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a8d5ba, #6aab91);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            color: #2e8b57; /* Dark green */
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #4a6e5f; /* Subtle green */
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Input Field Styles */
+        input[type="email"] {
+            padding: 15px;
+            border: 2px solid #2e8b57;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="email"]:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+        }
+
+        /* Button Styles */
+        button {
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2e8b57;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e6e40;
+            transform: scale(1.05);
+        }
+
+        /* Thank You Message Styles */
+        .thank-you-message {
+            display: none;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper" id="form-wrapper">
+            <h1>Welcome!</h1>
+            <p>To get started, please enter your email address below. Getting started only takes 3 minutes!</p>
+            <form id="email-form">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+        <div class="thank-you-message" id="thank-you-message">
+            <h1>Thank You!</h1>
+            <p>Please check your email for information and how to get started. It only takes 3 minutes!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Hide the form and show the thank you message
+            document.getElementById('form-wrapper').style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
