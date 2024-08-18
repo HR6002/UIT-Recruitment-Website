@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add internal CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2f1; /* Light background */
+            margin-top: 56px; /* Adjust for fixed navbar */
+        }
+
+        .testimonial-item {
+            background: #ffffff; /* White background for testimonial items */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .media-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            background: #00b084; /* Primary color background */
+        }
+
+        .media-element {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            padding: 20px;
+        }
+
+        .testimonial-content h5 {
+            margin-top: 0;
+            color: #00b084; /* Primary color for headings */
+        }
+
+        .btn-back {
+            margin-top: 20px;
+            background: #00b084; /* Primary color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background: #00977d; /* Darker shade for hover */
+        }
+
+        .cta-section {
+            background: #00b084; /* Primary color */
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            margin-bottom: 30px;
+        }
+
+        .cta-section .btn-get-started {
+            background: #fff;
+            color: #00b084; /* Primary color text */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .cta-section .btn-get-started:hover {
+            background: #e0f2f1; /* Light green background on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+   
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="mb-3">All Testimonials</h2>
+            <p>Discover what our clients have to say about us.</p>
+        </div>
+        
+        <div class="row">
+            <!-- Testimonial Item 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-item">
+                    <div class="media-container">
+                        <img class="media-element" src="https://media.istockphoto.com/id/1369508581/photo/successful-small-business-owner-standing-at-cafe-entrance.jpg?s=612x612&w=0&k=20&c=7eguMqSj5I5ax4icnvsGPQA8KaSX4wy5DmhnIKAcBSY=" alt="Testimonial Image">
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>John Doe</h5>
+                        <p>"Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-item">
+                    <div class="media-container">
+                        <video class="media-element" controls>
+                            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>Jane Smith</h5>
+                        <p>"Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="testimonial-item">
+                    <div class="media-container">
+                        <img class="media-element" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2YhXT6S6YhURnXbvm8nAhtPxdDeQaGxzm0Q&s" alt="Testimonial Image">
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>Emily Johnson</h5>
+                        <p>"Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam."</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat more testimonial items as needed -->
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="btn-back">Back to Home</a>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="cta-section">
+            <h2>Are You Ready to Begin Your Success Story?</h2>
+            <p>Join the many happy customers who have already benefited from our recruitment services. Take the first step towards your success today!</p>
+            <a href="start.html" class="btn-get-started">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
